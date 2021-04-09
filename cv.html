@@ -22,25 +22,25 @@
         </div>    
         
         <div class="square">
-            <a href="kimjestem.html" class="tilelink">
-                <div class="tile1">
+            <a class="tilelink">
+                <div class="tile1 pointer" id="jestem">
                     <i class="icon-user"></i><br/>Kim jestem?</a>
                 </div>
             </a>
-            <a href="oferta.html" class="tilelink">
-                <div class="tile1">
+            <a class="tilelink">
+                <div class="tile1 pointer" id="co">
                     <i class="icon-laptop"></i><br/>Co oferuję?
                 </div>
             </a>
             <div style="clear: both;"></div>
             
-            <a href="cv.html" class="tilelink">
-                <div class="tile2">
-                <i class="icon-graduation-cap"></i><br/>Curriculum vitae
+            <a class="tilelink">
+                <div class="tile2 pointer" id="cv">
+                    <i class="icon-graduation-cap"></i><br/>Curriculum vitae
                 </div>
             </a>
-            <a href="kontakt.html" class="tilelink">
-                <div class="tile3">
+            <a  class="tilelink">
+                <div class="tile3 pointer" id="kontakt">
                     <i class="icon-mail"></i><br/>Kontakt ze mną
                 </div>
             </a>
@@ -51,10 +51,8 @@
             </div>
         </div>
         <div class="square">
-            <div class="tile5">
-                Moje Curriculum vitae<br/><br/>
-                2018 - Lakiernik w firmie Goldbeck Elementy Polska sp. z.o.o
-                
+            <div id="content" class="tile5">
+                Moje CV!
             </div>
             <a href="https://www.youtube.com/" target="_blank" class="tilelink">
                 <div class="yt">
@@ -80,7 +78,35 @@
         </div>
         <div style="clear:both;"></div>
         
-        <div class="rectangle">2021 &copy; Grzegorz Wojciechowski - Portfolio. Programista webowy zaprasza do współpracy!<br/><i class="icon-mail-alt"></i> wojciechowskigrzegorz2@gmail.com</div>
+        <div class="rectangle" >2021 &copy; Grzegorz Wojciechowski - Portfolio. Programista webowy zaprasza do współpracy!<br/><i class="icon-mail-alt"></i> wojciechowskigrzegorz2@gmail.com</div>
     </div>
 </body>
+<script>
+
+(function() {
+    var jestemElement = document.getElementById('jestem');
+    var coElement = document.getElementById('co');
+    var cvElement = document.getElementById('cv');
+    var kontaktElement = document.getElementById('kontakt');
+    var contentElement = document.getElementById('content');
+
+    jestemElement.addEventListener("click", function() {
+        contentElement.innerHTML = "Kim jestem";
+    }, false);
+
+    coElement.addEventListener("click", function() {
+        contentElement.innerHTML = "Co ja robię tu :D?";
+    }, false);
+
+    cvElement.addEventListener("click", function() {
+        contentElement.innerHTML = "Moje CV!";
+    }, false);
+
+    kontaktElement.addEventListener("click", function() {
+        contentElement.innerHTML = "Kontakt do mnie ->";
+    }, false);
+}())
+
+
+</script>
 </html>

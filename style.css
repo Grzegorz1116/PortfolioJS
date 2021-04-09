@@ -149,3 +149,7 @@ a.tilelink
     color: #ffffff;
     text-decoration: none;
 }
+
+.pointer {
+    cursor: pointer;
+}
